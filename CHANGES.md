@@ -2,9 +2,24 @@
 
 ### ? - ?
 
+##### Breaking Changes :mega:
+
+- Renamed the following properties on `CesiumWebMapTileServiceRasterOverlay`:
+  - `Url` -> `BaseUrl`
+  - `West` -> `RectangleWest`
+  - `South` -> `RectangleSouth`
+  - `East` -> `RectangleEast`
+  - `North` -> `RectangleNorth`
+- `UseWebMercatorProjection` has been deprecated on `CesiumWebMapTileServiceRasterOverlay`. Instead, use the `Projection` enum property to specify between `Geographic` or `WebMercator` projection.
+
+##### Additions :tada:
+
+- Added `TileWidth` and `TileHeight` properties to `CesiumWebMapTileServiceRasterOverlay`.
+
 ##### Fixes :wrench:
 
 - Fixed an issue where DynamicPawn could get stuck after interrupting a flight from `UCesiumFlyToComponent`.
+- Fixed a bug where `CesiumTileMapServiceRasterOverlay`, `CesiumWebMapServiceRasterOverlay`, and `CesiumWebMapTileServiceRasterOverlay` would attempt to load empty URLs.
 
 ### v2.5.0 - 2024-05-01
 
